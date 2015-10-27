@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home page draft1</title>
+  <title>Hear Between The Lines</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -11,9 +11,10 @@
 <body>
 <div class="container">
   <div class="jumbotron">
-    <h1>Encryption Through Music</h1>
-    <p>Use this site for personalized encrpytion on any text!!</p> 
+    <h1>Hear Between the Lines</h1>
+    <p>Jam out... to your secrets</p> 
   </div>
+  <!--
   <div class="row">
     <div class="col-sm-4">
       <h3>How It Works</h3>
@@ -31,16 +32,25 @@
       <p>Links to a ticket sending page</p>
     </div>
   </div>
+  //-->
   <div class = "row">
     <div class="col-sm-4">
-      <h3>Input a Message To Encrypt</h3>
-      <textarea cols="30" rows="4" name="comment"></textarea>
+      <h3>Encrypt: Enter text and Upload a music file</h3>
+      <form method = "post">
+        <textarea cols="30" rows="4" name="message"></textarea>
+        <input type="file" name="musicfile">
+        <button type= "submit">Submit</button>
+      </form>
     </div>
+    
     <div class="col-sm-4">
-      <h3>Add a Music File</h3>
-      <input type="file">
-      <input type="submit" value="Submit">
-
+      <h3>Decrypt: Upload your "music" file below</h3>
+      <!--
+      <form method = "post">
+        <input type="file" name="encryptedfile">
+        <button type= "submit">Submit</button>
+      </form>
+      //-->
     </div>
     
   </div>
