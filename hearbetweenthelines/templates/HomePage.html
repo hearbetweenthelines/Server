@@ -12,7 +12,7 @@
 <div class="container">
   <div class="jumbotron">
     <h1>Hear Between the Lines</h1>
-    <p>Jam out... to your secrets</p> 
+    <p>Jam out... to your secrets</p>
   </div>
   <!--
   <div class="row">
@@ -27,7 +27,7 @@
       <p>Everyone's names</p>
     </div>
     <div class="col-sm-4">
-      <h3>Contact Us</h3> 
+      <h3>Contact Us</h3>
       <p>Have questions? Contact us through link below</p>
       <p>Links to a ticket sending page</p>
     </div>
@@ -36,13 +36,13 @@
   <div class = "row">
     <div class="col-sm-4">
       <h3>Encrypt: Enter text and Upload a music file</h3>
-      <form method = "post">
+      <form action = "" method = "post" enctype=multipart/form-data>
         <textarea cols="30" rows="4" name="message"></textarea>
         <input type="file" name="musicfile">
-        <button type= "submit">Submit</button>
+        <button type= "submit" value="Upload">Submit</button>
       </form>
     </div>
-    
+
     <div class="col-sm-4">
       <h3>Decrypt: Upload your "music" file below</h3>
       <!--
@@ -52,6 +52,6 @@
       </form>
       //-->
     </div>
-    
+
   </div>
 </div>
