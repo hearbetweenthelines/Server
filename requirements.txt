@@ -18,6 +18,7 @@ pexpect==4.0.1
 pickleshare==0.5
 psycopg2==2.6.1
 ptyprocess==0.5
+pycrypto==2.6.1
 requests==2.8.1
 requests-oauthlib==0.5.0
 simplegeneric==0.8.1
