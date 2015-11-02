@@ -11,9 +11,9 @@ def allowed_file(filename):
 
 @app.route('/', methods =['GET','POST'])
 def home():
-	if request.method == "POST":
-		text = request.form['message']
-		if text != "":
+    if request.method == "POST":
+        text = request.form['message']
+        if text != "":
 			messageFile = open("Message.txt","w+")
 			messageFile.write(text)
 			messageFile.close()
@@ -24,8 +24,7 @@ def home():
 				hide("Message.txt", filename, '1', "MixedTape.wav")
 			else:
 				print 'Add the right file you dumb fuck'
-		else:
-			print 'hello'
+        else:
 			file = request.files['encryptedfile']
 			if file and allowed_file(file.filename):
 				filename = secure_filename(file.filename)
@@ -37,5 +36,4 @@ def home():
 			else:
 				print 'Add the right file you dumb fuck'
 
-
-	return render_template('HomePage.html')
+    return render_template('index.html')
