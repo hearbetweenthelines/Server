@@ -21,7 +21,7 @@ def home():
 			if file and allowed_file(file.filename):
 				filename = secure_filename(file.filename)
 				file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-				hide("Message.txt", filename, '1', "MixedTape.wav")
+				hide("Message.txt", filename, '1', "MixedTape.mp3")
 			else:
 				print 'Add the right file you dumb fuck'
         else:
