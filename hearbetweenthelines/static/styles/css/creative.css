@@ -16,7 +16,7 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #a66bbe; 
+    border-color: #a66bbe;
     border-width: 3px;
 }
 
@@ -178,7 +178,6 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
