@@ -34,6 +34,6 @@ def home():
 				messageFile.write(text)
 				messageFile.close()
 			else:
-				print 'Add the right file you dumb fuck'
+				print 'CREATE AN HTML ERROR MESSAGE'
 
     return render_template('index.html')
