@@ -18,8 +18,8 @@ def home():
 			messageFile.write(text)
 			messageFile.close()
 			file = request.files['musicfile']
-			if file and allowed_file(file.filename):
-				filename = secure_filename(file.filename)
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
                 if not os.path.exists(UPLOAD_FOLDER):
                     print "this did happen"
                     os.makedirs(UPLOAD_FOLDER)
