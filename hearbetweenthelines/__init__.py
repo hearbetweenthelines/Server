@@ -12,9 +12,6 @@ ALLOWED_EXTENSIONS = set(['mp3'])
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
-    print "this did happen"
-    print os.getcwd()
+
 
 import views
