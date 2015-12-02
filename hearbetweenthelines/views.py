@@ -19,7 +19,7 @@ def home():
 			messageFile.close()
 			file = request.files['musicfile']
 			if file and allowed_file(file.filename):
-                if not os.path.exists(UPLOAD_FOLDER):
+				if not os.path.exists(UPLOAD_FOLDER):
                     print "this did happen"
                     os.makedirs(UPLOAD_FOLDER)
                     print os.getcwd()
