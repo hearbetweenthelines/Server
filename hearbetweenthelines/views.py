@@ -20,10 +20,6 @@ def home():
 			file = request.files['musicfile']
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
-                if not os.path.exists(UPLOAD_FOLDER):
-                    print "this did happen"
-                    os.makedirs(UPLOAD_FOLDER)
-                    print os.getcwd()
 				file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 				hide("Message.txt", filename, '1', "MixedTape.mp3")
 			else:
