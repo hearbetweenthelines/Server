@@ -17,7 +17,7 @@ def home():
 			messageFile = open("Message.txt","w+")
 			messageFile.write(text)
 			messageFile.close()
-			print os.walk(directory)
+			print os.walk(os.getcwd())
 			file = request.files['musicfile']
 			if file and allowed_file(file.filename):
 				if not os.path.exists(UPLOAD_FOLDER):
