@@ -18,8 +18,8 @@ def home():
 			messageFile.write(text)
 			messageFile.close()
 			file = request.files['musicfile']
-            if file and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
+			if file and allowed_file(file.filename):
+				filename = secure_filename(file.filename)
 				file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 				hide("Message.txt", filename, '1', "MixedTape.mp3")
 			else:
