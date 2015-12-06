@@ -11,24 +11,22 @@ def allowed_file(filename):
 
 @app.route('/', methods =['GET','POST'])
 def home():
+    msg1 = ""
+    msg2 = ""
     if request.method == "POST":
         text = request.form['message']
         if text != "":
 			messageFile = open("Message.txt","w+")
 			messageFile.write(text)
 			messageFile.close()
-			for x in os.walk(os.getcwd()): print x
 			file = request.files['musicfile']
 			if file and allowed_file(file.filename):
-				if not os.path.exists(UPLOAD_FOLDER):
-					print "this did happen"
-					os.makedirs(UPLOAD_FOLDER)
-					print os.getcwd()
 				filename = secure_filename(file.filename)
 				file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 				hide("Message.txt", filename, '1', "MixedTape.mp3")
+				msg1 = "Success!"
 			else:
-				print 'CREATE AN HTML ERROR MESSAGE'
+				msg1 = "Error: Please enter a proper music file"
         else:
 			file = request.files['encryptedfile']
 			if file and allowed_file(file.filename):
@@ -38,7 +36,7 @@ def home():
 				messageFile = open("DecodedMessage.txt","w+")
 				messageFile.write(text)
 				messageFile.close()
+				msg2 = "Success!"
 			else:
-				print 'CREATE AN HTML ERROR MESSAGE'
-
-    return render_template('index.html')
+				msg2 = "Error: Please enter a proper music file"
+    return render_template('index.html',message1 = msg1, message2 = msg2)

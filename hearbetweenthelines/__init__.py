@@ -5,8 +5,8 @@ import getpass
 
 
 user = getpass.getuser()
-UPLOAD_FOLDER = "/tmp"
-#UPLOAD_FOLDER = '/Users/rohansubramaniam/Documents/FreshmanYear/CS196/hearbetweenthelines'
+#UPLOAD_FOLDER = "/tmp"
+UPLOAD_FOLDER = '/Users/rohansubramaniam/Documents/FreshmanYear/CS196/hearbetweenthelines'
 ALLOWED_EXTENSIONS = set(['mp3'])
 
 app = Flask(__name__)
