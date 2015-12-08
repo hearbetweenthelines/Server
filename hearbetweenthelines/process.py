@@ -1,3 +1,8 @@
+"""
+#Author: Eric Hennenfent
+Compresses and encrypts the file passed to it.
+"""
+
 from Crypto.Cipher import AES
 from Crypto.Hash import MD5
 import zlib
