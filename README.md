@@ -3,6 +3,6 @@ Getting it running:
 
 1. cd into the HBTLServer directory. 
  
-2. ```. venv/bin/activate ```
+2. Activate virtual environment ```. venv/bin/activate ```
 
-3. ```python run.py ```
+3. Deploy the app to localhost ```python run.py ```
