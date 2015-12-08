@@ -1,3 +1,9 @@
+"""
+#Author: Eric Hennenfent
+Compresses and encrypts the file to be hidden and stores it in the least significant bit of each byte. 
+This is a messy way to to Stego but it works for small amounts.
+"""
+
 from itertools import izip_longest
 from process import compress_and_encrypt, decrypt_and_decompress
 
