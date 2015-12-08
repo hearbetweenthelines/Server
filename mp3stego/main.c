@@ -214,7 +214,7 @@ int main(int argc, char **argv)
 		    tempname[10]='w';
 		    tempname[11]='a';
 		    tempname[12]='v';
-		    printf("test\n");
+		    // printf("test\n");
 	        pid_t pid = fork();
 	        if (pid == 0)
 	        { /* child process */
@@ -222,7 +222,7 @@ int main(int argc, char **argv)
 	                                   "pcm_s16le", NULL, NULL};
 	            argv[2] = infname;
 	            argv[5] = tempname;
-	            execv("ffmpeg", argv);
+	            execv("./mp3stego/ffmpeg", argv);
 	            exit(127); /* only if execv fails */
 	        }
 	        else
